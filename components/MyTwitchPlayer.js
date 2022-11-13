@@ -16,7 +16,7 @@ function MyTwitchPlayer({ videoId }) {
     let dispatch = useDispatch();
 
     useEffect(() => {
-        const intervalId = window.setInterval(updateComments, 1000);
+        const intervalId = window.setInterval(updateComments, 60 * 1000);
 
         return () => { clearInterval(intervalId); }
     }, []);
